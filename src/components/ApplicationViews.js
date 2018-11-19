@@ -44,6 +44,12 @@ class ApplicationViews extends Component {
         owners: this.ownersFromAPI
     }
 
+    // In the example code below, you will notice the use of <React.Fragment />. That is simply a React wrapper around your old friend document.createDocumentFragment(). What this does is prevent unnecessary <div>, <article>, or <section> tags from being created.
+
+    // exact is needed on the first route, otherwise it will also match the other two routes, and the LocationList will be the only component rendered, no matter what the URL is.
+
+    // The <Link/> and the <Route/> JSX elements are complementary to each other. If you add a new Link element in your application with a new URL, then you must create a matching Route element.
+
     render() {
         return (
             <React.Fragment>
